@@ -1,0 +1,284 @@
+/****** Reset CSS ******
+ * 
+ * Guardamos en variables los colores que queramos usar en la mini web
+ * 
+ * le indicamos el maximo que puede utilizar de expacio en la pagina que es 1200px
+ * 
+ * colocamos un tamaño de letra
+ * 
+ * y un tipo de tipografia general que usaremos
+ * 
+ * */
+
+
+:root{
+	--main-font: sans-serif;
+	--font-size: 16px;
+	--main-color: #f7df1e;
+	--second-color: #222;
+	--main-modal-color: rgba(247, 222, 30, 0.85);
+	--second-modal-color: rgba(34, 34, 34, 0.85);
+	--container-width: 1200px;
+}
+
+/*
+
+Le deximos un tipo borde  a toda la pagina
+
+Luegos el tipo de tipografia y tamaño de letra que usara toda la página
+
+Le decimos que genero un tipo de animación a nuestro scroll cuando cambiamos de lado.
+
+*/
+
+html{
+	box-sizing: border-box;
+	font-family: var(--main-font);
+	font-size: var(--font-size);
+	scroll-behavior: smooth;
+}
+
+/*Le decimos que antes y durante y despues todas las cajas estaran inherit
+
+body le colocamos un margin 0 y que oculte el scroll horinzontal o del eje x
+
+y configuramos el contenido base de img
+
+*/
+
+*,
+*:before,
+*:after{
+	box-sizing: inherit;
+}
+
+body{
+	margin: 0;
+	overflow-x: hidden;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+/* ****** Menu de Hamburguesas ******* */
+
+
+/*Le decimos que tipo position la cabezara y a la arriba 0 para luego agregar 1rem a cada lado como añadido con el padding
+
+le definimos el color y color de fondo con colores ya establecidos en el reset.
+
+y luego le decimos al h1 que no tenga margin y este centrado.
+*/
+.header{
+	position: sticky;
+	top: 0;
+	padding: 1rem;
+	background-color: var(--main-color);
+	color: var(--second-color);
+}
+
+
+
+.header h1{
+	margin: 0auto;
+	text-align: center;
+}
+
+/*Configuramos las seciones para que ocupen el masixmo que establecimos en :root de 1200px le damos un padding para arriba de 4rem y de 2rem a cada lado y margin auto en los de la derecha y izquierda para que ocupe todo el espacio*/
+
+
+.section{
+	padding: 2rem;
+	padding-top: 4rem;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: var(--container-width);
+	min-height: 100vh;
+	text-align: center;
+}
+
+/*Primero antes tocar el boton le damos estilo a nav o panel
+
+Le indicamos como posicion fija
+le decimos que va debajo del panel con el z-index
+
+
+Hacemos que ocupe toda la pagina por encima de todo con todo el espacio posible
+
+de ancho que ocupe todo el 100%
+
+y el color de fondo segundo
+*/
+
+.panel{
+	position: fixed;
+	z-index: 998;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;	
+	width: 100%;
+	background-color: var(--second-modal-color);
+	opacity: 0;
+	/*visibility: hidden;*/
+	transition: transform.3s ease,opacity.3s;
+	/*
+	
+	tambien se puede jugar con la opacidad si no quiere dar de arriba a abajo o otras partes
+
+
+	De arriba
+	transform: translate(0,-100%);
+	/*De abajo
+	transform: translate(0,100%);
+	/*De derecha
+	transform: translate(100%,0);
+	De izquierda*/
+	/*transform: translate(-100%,0);*/
+}
+
+.panel.is-active{
+	transform: translate(0,0);
+	opacity: 1;
+	visibility: visible;
+}
+
+
+/*
+Posicion fija para que no cambie
+
+le indicamos el tamaño
+
+le decimos el tamaño del border
+
+display flex
+
+el padding lo definimos como 0
+
+
+el contenido lo centramos y los items tambien 
+
+y a lo ultimo colocamos el color de fondo como el principal
+*/
+
+.panel-btn{
+	position: fixed;
+	z-index: 999;
+	bottom: 1vw;
+	right: 1vw;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--main-color);
+}
+
+/*Estilo al NAV o El MENU.*/
+
+.menu{
+	width: inherit;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+}
+
+.menu a{
+	padding: 2rem;
+	width: inherit;
+	display: block;
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: var(--main-color);
+	transition: all 0.3s ease;
+}
+
+.menu a:hover{
+	font-size: bold;
+	color: var(--second-color);
+	background-color: var(--main-color);
+}
+
+/* **********Eventos de Teclado ************* */
+
+.stage{
+	display: flex;
+	min-height: 50vh;
+	background-color: var(--second-color);
+}
+
+.ball{
+	margin: auto;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	background-color: var(--main-color);
+}
+
+
+/* ******************** ScrollTopButton ******************** */
+
+.scroll-top-btn{
+	position: fixed;
+	z-index: 999;
+	bottom: 1vh;
+	right: calc(4.25rem + 1vw);
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	font-size: 2rem;
+	font-weight: bold;
+	background-color: var(--main-color);
+	color: var(--second-color);
+	cursor: pointer;
+	outline: 0;
+	border: 0;
+	transition: all 0.3s ease-out;
+}
+
+.scroll-top-btn:hover{
+	background-color: var(--second-color);
+	color:var(--main-color);
+}
+
+.hidden{
+	visibility: hidden;
+	opacity: 0;
+}
+
+/* ******************** DarkThemeButton ******************** */
+
+.dark-theme-btn{
+	position: fixed;
+	z-index: 999;
+	bottom: 1vh;
+	left: 1vw;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	font-size: 2rem;
+	font-weight: bold;
+	background-color: var(--main-color);
+	color: var(--second-color);
+	cursor: pointer;
+	outline: 0;
+	border: 0;
+	transition: all 0.3s ease-out;
+}
+
+.dark-theme-btn:hover{
+	background-color: var(--second-color);
+	color:var(--main-color);
+}
+
+.dark-mode{
+	background-color: var(--second-color);
+	color:var(--main-color);
+}
