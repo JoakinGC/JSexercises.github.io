@@ -14,13 +14,15 @@ export default function scrollTopBotton(btn){
             $scrollBtn.classList.add("hidden");
         }
 
-        console.log(w.pageYOffset, d.documentElement.scrollTop);
-    })
+       
+    });
     d.addEventListener("click",(e) =>{
-        w.scrollTo({
-            behavior: "smooth",
-            top: 0,
-            //left : 0,
-        })
-    })
+        if(e.target.matches(btn)){
+            w.scrollTo({
+                behavior: "smooth",
+                top: 0,
+                //left : 0,
+            })
+        }
+    });
 }

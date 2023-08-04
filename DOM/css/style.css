@@ -137,7 +137,7 @@ y el color de fondo segundo
 	/*De derecha
 	transform: translate(100%,0);
 	De izquierda*/
-	/*transform: translate(-100%,0);*/
+	transform: translate(-100%,0);
 }
 
 .panel.is-active{
