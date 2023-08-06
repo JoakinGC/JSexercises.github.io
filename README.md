@@ -1,5 +1,7 @@
 #  JS JAVASCRIPT
 
+<img src="https://postimg.cc/gallery/gjXhTcp">
+
 Son algunos de los ejercicios que he hecho de DOM JS
 
 
