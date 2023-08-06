@@ -1,4 +1,4 @@
-#JS JAVASCRIPT
+# JS JAVASCRIPT
 
 Son algunos de los ejercicios que he hecho de DOM JS
 
