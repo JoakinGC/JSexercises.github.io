@@ -1,6 +1,11 @@
 #  JS JAVASCRIPT
 
-<img src="https://postimg.cc/gallery/gjXhTcp">
+<a href="https://postimg.cc/k6ZY8X3b" target="_blank"><img src="https://i.postimg.cc/k6ZY8X3b/js.png" alt="js"/></a><br/><br/>
+<a href="https://postimg.cc/xXyZ72Hw" target="_blank"><img src="https://i.postimg.cc/xXyZ72Hw/proect4.png" alt="proect4"/></a><br/><br/>
+<a href="https://postimg.cc/NKwVpMy8" target="_blank"><img src="https://i.postimg.cc/NKwVpMy8/protecy2.png" alt="protecy2"/></a><br/><br/>
+<a href="https://postimg.cc/kVTpJvTw" target="_blank"><img src="https://i.postimg.cc/kVTpJvTw/proyect1.png" alt="proyect1"/></a><br/><br/>
+<a href="https://postimg.cc/dLCp2d0t" target="_blank"><img src="https://i.postimg.cc/dLCp2d0t/proyect3.png" alt="proyect3"/></a><br/><br/>
+
 
 Son algunos de los ejercicios que he hecho de DOM JS
 
