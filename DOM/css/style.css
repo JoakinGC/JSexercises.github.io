@@ -282,3 +282,41 @@ y a lo ultimo colocamos el color de fondo como el principal
 	background-color: var(--second-color);
 	color:var(--main-color);
 }
+
+
+/* *********** Network Status ********** */
+
+.online,
+.offline{
+	position: sticky;
+	top:0;
+	z-index: 1000;
+	padding: 1rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	background-color: #1b5e20;
+	color:#fff;
+}
+
+.offline{
+	background-color: #b71c1c;
+}
+
+/*Botones de camara*/
+
+.btnCamWeb{
+	width: 10rem;
+	height: 4rem;
+	background-color: var(--main-color);
+	margin-left: 4rem;
+	color: var(--main-font);
+	border: hidden;
+	font-size: var(--font-size);
+	text-align: center;
+}
+
+.btnCamWeb:hover{
+	background-color: var(--second-color);
+	color: var(--main-color);
+}

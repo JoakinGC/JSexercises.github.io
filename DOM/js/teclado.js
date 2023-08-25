@@ -15,7 +15,7 @@ export function moveBall(e,ball,stage){
     //const move = (direction) =>{}
 
 
-    console.log(e.keyCode);
+    //console.log(e.keyCode);
     switch(e.keyCode){
 
         //Izq
